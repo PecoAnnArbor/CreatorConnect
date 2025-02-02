@@ -1,0 +1,93 @@
+@keyframes fadeInBg {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+.home-page {
+    height: 100vh;
+    width: 100vw;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/HomeBackground.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeInBg 1.5s ease-in-out forwards;
+
+}
+
+
+.home-title {
+    font-size: 6.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.779);
+    display: flex;
+    gap: 40px;
+}
+
+.continue {
+    position: absolute;
+    bottom: 20px;
+    font-size: small;
+}
+
+
+.fade-in-left span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInLeft 0.6s ease forwards;
+}
+
+.fade-in-right span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInRight 0.6s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+
