@@ -1,0 +1,52 @@
+/* White Background */
+.dashboard-container {
+    background: white;
+    color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex; /* Makes sidebar and content sit side-by-side */
+}
+
+/* Sidebar for Vertical Tabs */
+.editor-tabs {
+    display: flex;
+    flex-direction: column; /* Stack tabs vertically */
+    background: #f5f5f5;
+    padding: 10px;
+    width: 200px; /* Fix sidebar width */
+    height: 100vh; /* Full height */
+    border-right: 2px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Individual Tab Styling */
+.tab {
+    padding: 12px;
+    cursor: pointer;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.tab:hover {
+    background: #e0e0e0;
+}
+
+.tab.active {
+    border-left: 4px solid #007acc;
+    font-weight: bold;
+    background: #ddd;
+}
+
+/* Content Section (Takes Remaining Space) */
+.editor-content {
+    flex-grow: 1; /* Makes content take up remaining space */
+    padding: 20px;
+    overflow: auto;
+    background: white;
+}
